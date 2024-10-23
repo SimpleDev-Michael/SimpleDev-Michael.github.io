@@ -1,110 +1,132 @@
-/* styles.css */
+/* style.css */
+
+/* Basic reset for a clean base */
+body, h1, h2, p, a {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f7fa;
-    margin: 0;
+    background-color: #f7f8fc;
+    color: #333;
+    line-height: 1.6;
     padding: 20px;
 }
 
+/* Header styling */
 header {
     text-align: center;
-    margin-bottom: 20px;
+    /* margin-bottom: 30px; */
 }
 
-h1 {
-    font-size: 2em;
-    color: #333;
-    margin-bottom: 20px;
+header h1 {
+    font-size: 2.5em;
+    color: #007bff;
+    font-weight: bold;
 }
 
+/* Project grid container */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
-    max-width: 900px; /* Set a maximum width for the grid */
-    margin: 0 auto; /* Center the grid */
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-@media (max-width: 768px) {
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
+/* Project card styling */
 .project-card {
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .project-card h2 {
     font-size: 1.5em;
     color: #333;
-    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.project-card img {
+    border-radius: 5px;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .project-card p {
-    color: #555;
-    margin: 10px 0;
+    color: #666;
+    font-size: 0.95em;
+    margin-bottom: 15px;
 }
 
-.project-links {
-    margin: 15px 0;
-}
-
+/* Button styling */
 .button {
+    display: inline-block;
     background-color: #007bff;
     color: #fff;
-    padding: 10px 15px;
+    padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
-    margin-right: 10px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    text-align: center;
+    font-size: 0.9em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .button:hover {
     background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.project-links {
+    text-align: center;
+    margin-top: 10px;
 }
 
 .project-info {
     border-top: 1px solid #e0e0e0;
     padding-top: 10px;
-    font-size: 0.9em;
+    font-size: 0.85em;
     color: #777;
+    margin-top: 15px;
 }
 
-.project-info span {
-    background-color: #eef;
-    border-radius: 3px;
-    padding: 2px 5px;
-    margin-right: 5px;
-    font-size: 0.85em;
+/* Footer styling */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #555;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 /* styles.css */
 
-/* Existing styles... */
-
-footer {
-    /* background-color: #ffdbc4; */
-    color: black;
-    padding: 20px 0;
-    text-align: center;
-    margin-top: 40px;
-}
-
-footer a {
-    color: #00bfff;
-    text-decoration: none;
-    margin-left: 5px;
-}
-
-footer a:hover {
-    color: #0099cc;
-    text-decoration: underline;
+/* Divider styling */
+.divider {
+    border: none;
+    border-top: 2px solid #e0e0e0; /* Light grey line for a modern look */
+    margin: 20px 0; /* Space above and below the divider */
+    width: 80%; /* Adjust width as needed */
+    max-width: 800px; /* Ensures it doesn't get too wide on large screens */
+    margin-left: auto;
+    margin-right: auto; /* Centers the line */
 }
